@@ -46,7 +46,7 @@ void RenderSystem_new(tgPtr stack) {
     const size_t size = sizeof(RenderPlot);
     RenderPlot *plot = malloc(size);
     memset(plot, 0, size);
-    tgStackNewObj(stack, plot, RenderSystem.type);
+    tgStackNewObj(stack, RenderSystem.type, plot);
 }
 
 struct Prepare_Args {

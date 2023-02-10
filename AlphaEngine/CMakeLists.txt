@@ -15,7 +15,7 @@ function(install_systems TARGET_NAME SYSTEMS)
         add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 $<TARGET_FILE:${SYSTEM}>
-                "$<TARGET_FILE_DIR:${TARGET_NAME}>")
+                "$<TARGET_FILE_DIR:${TARGET_NAME}>/bin/$<LIBRARY_OUTPUT_NAME:${SYSTEM}>")
     endforeach()
 endfunction()
 
