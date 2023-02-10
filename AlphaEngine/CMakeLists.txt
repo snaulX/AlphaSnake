@@ -4,7 +4,7 @@ include(Cmake/CPM.cmake)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCES Source/AlphaEngine.cpp)
+set(SOURCES Source/AlphaEngine.cpp Source/JobSystem.cpp)
 
 add_library(AlphaEngine STATIC ${SOURCES})
 
